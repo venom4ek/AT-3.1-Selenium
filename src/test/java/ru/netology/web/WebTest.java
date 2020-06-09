@@ -14,20 +14,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WebTest {
 
-    private static ChromeDriver driver;
+    private ChromeDriver driver = new ChromeDriver();
 
     @BeforeAll
     static void setUpAll() {
         System.setProperty("webdriver.chrome.driver", "driver/lin/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setHeadless(true);
-//        chromeOptions.addArguments("headless");
-        chromeOptions.addArguments("window-size=1200x600");
-        chromeOptions.addArguments("disable-gpu");
-        chromeOptions.addArguments("disable-infobars");
-        chromeOptions.addArguments("disable-extensions");
-        chromeOptions.addArguments("no-sandbox");
-        chromeOptions.addArguments("disable-dev-shm-usage");
+//        chromeOptions.setHeadless(true);
+        chromeOptions.addArguments("--headless");
+//        chromeOptions.addArguments("window-size=1200x600");
+//        chromeOptions.addArguments("disable-gpu");
+//        chromeOptions.addArguments("disable-infobars");
+//        chromeOptions.addArguments("disable-extensions");
+//        chromeOptions.addArguments("no-sandbox");
+//        chromeOptions.addArguments("disable-dev-shm-usage");
     }
 
     @BeforeEach
