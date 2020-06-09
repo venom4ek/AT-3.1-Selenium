@@ -18,10 +18,11 @@ public class WebTest {
     ChromeOptions chromeOptions = new ChromeOptions();
 
 
+
     @BeforeAll
-    void setUpAll() {
+    static void setUpAll() {
         System.setProperty("webdriver.chrome.driver", "driver/lin/chromedriver");
-        chromeOptions.addArguments("--headless");
+
 //        chromeOptions.setHeadless(true);
 //        chromeOptions.addArguments("window-size=1200x600");
 //        chromeOptions.addArguments("disable-gpu");
@@ -33,6 +34,7 @@ public class WebTest {
 
     @BeforeEach
     void setUp() {
+        chromeOptions.addArguments("--headless");
         driver = new ChromeDriver(chromeOptions);
     }
 
