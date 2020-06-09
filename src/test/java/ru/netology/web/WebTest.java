@@ -20,6 +20,7 @@ public class WebTest {
     static void setUpAll() {
         System.setProperty("webdriver.chrome.driver", "driver/lin/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setHeadless(true);
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--disable-gpu");
         chromeOptions.addArguments("disable-infobars");
