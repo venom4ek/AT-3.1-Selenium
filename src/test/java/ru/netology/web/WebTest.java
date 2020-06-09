@@ -8,8 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import javax.swing.*;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WebTest {
@@ -18,18 +16,9 @@ public class WebTest {
     ChromeOptions chromeOptions = new ChromeOptions();
 
 
-
     @BeforeAll
     static void setUpAll() {
         System.setProperty("webdriver.chrome.driver", "driver/lin/chromedriver");
-
-//        chromeOptions.setHeadless(true);
-//        chromeOptions.addArguments("window-size=1200x600");
-//        chromeOptions.addArguments("disable-gpu");
-//        chromeOptions.addArguments("disable-infobars");
-//        chromeOptions.addArguments("disable-extensions");
-//        chromeOptions.addArguments("no-sandbox");
-//        chromeOptions.addArguments("disable-dev-shm-usage");
     }
 
     @BeforeEach
