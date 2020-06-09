@@ -21,7 +21,8 @@ public class WebTest {
         System.setProperty("webdriver.chrome.driver", "driver/lin/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setHeadless(true);
-        chromeOptions.addArguments("headless");
+//        chromeOptions.addArguments("headless");
+        chromeOptions.addArguments("window-size=1200x600");
         chromeOptions.addArguments("disable-gpu");
         chromeOptions.addArguments("disable-infobars");
         chromeOptions.addArguments("disable-extensions");
