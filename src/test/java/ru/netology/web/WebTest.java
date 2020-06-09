@@ -14,14 +14,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WebTest {
 
-    private ChromeDriver driver = new ChromeDriver();
+    private static ChromeDriver driver;
+    ChromeOptions chromeOptions = new ChromeOptions();
+
 
     @BeforeAll
-    static void setUpAll() {
+    void setUpAll() {
         System.setProperty("webdriver.chrome.driver", "driver/lin/chromedriver");
-        ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.setHeadless(true);
         chromeOptions.addArguments("--headless");
+//        chromeOptions.setHeadless(true);
 //        chromeOptions.addArguments("window-size=1200x600");
 //        chromeOptions.addArguments("disable-gpu");
 //        chromeOptions.addArguments("disable-infobars");
@@ -32,7 +33,7 @@ public class WebTest {
 
     @BeforeEach
     void setUp() {
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(chromeOptions);
     }
 
     @AfterEach
